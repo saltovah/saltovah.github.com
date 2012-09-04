@@ -1,11 +1,34 @@
+$(".block").toggle(function() {
+    $(this).animate({ backgroundColor: "black" }, 1000);
+},function() {
+    $(this).animate({ backgroundColor: "#68BFEF" }, 500);
+});
+
 <!doctype html>
 <html>
 <head>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    $(".block").toggle(function() {
+    $(this).animate({ backgroundColor: "black" }, 1000);
+},function() {
+    $(this).animate({ backgroundColor: "#68BFEF" }, 500);
+});
+
+  });
+  </script>
   <title>
 		Saltovah
 	</title>
+	
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<style type="text/css">
+
 body
 {
 	width:800px;
@@ -41,7 +64,13 @@ a:hover
 	color:#f0f0f0;
 	text-decoration:none;
 }
-
+ .block { 
+    color: white;
+    background-color: #68BFEF;
+    width: 150px; 
+    height: 70px;
+    margin: 10px; 
+  }
 div.name
 {
 	height:60px;
@@ -142,6 +171,7 @@ div.footer
 				<div class="mainblock">
 					<font>mainblock</font>
 				</div>
+				<div class="block"> Click me</div>
 			<!--	
 				<div class="footer">
 					<font>footer</font>
