@@ -1,205 +1,378 @@
-<!doctype html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
-<head>
-                    
-  <title>
-		Saltovah
-	</title>
-	
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<head>
+		<title>
+			Jetflight
+		</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Language" content="ru">
 	<style type="text/css">
+		body
+{
+	min-width: 800px;
+	max-width: 4000px;
+	font-family: Arial, Verdana, Sans-serif;
+	font-weight: normal;
+	font-size: 12;
+	background-color: #FFF5EA;
+	margin: 0 auto;
+	padding: 0;
+}
+h1
+{
+	font-size: 60;
+}
+a: link
+{
+	font-weight: bold;
+	text-decoration: underline;
+	color: #FFEFDD;
+}
+a: active
+{
+	font-weight: bold;
+	text-decoration: bold;
+	color: #FFEFDD;
+}
+a: visited
+{
+	font-weight: bold;
+	text-decoration: underline;
+	color: purple;
+}
+a: hover
+{
+	font-weight: 200;
+	text-decoration: none;
+	color: #FFEFDD;
+}
+/*---------------------------------------------*/
+#menu {
+				font-family: Arial, sans-serif;
+				font-weight: bold;
+				text-transform: none;
+				text-align: center;
+				margin: 0px 0;
+				padding: 0 0 0 10px;
+				list-style-type: none;
+				font-size: 17px;
+				/*
+				background: #eee;
+				*/
+				background-image: url(file:///D:/My%20Docs/Docs/Jetflight/Site/menu.png);
+				height: 30px;
+				width: 1230px;
+				/*
+				border-top: 2px solid #eee;
+				border-left: 2px solid #eee;
+				border-bottom: 2px solid #ccc;
+				border-right: 2px solid #ccc;
+				*/
+				border-bottom-right-radius: 5px;
+				border-bottom-left-radius: 5px;
+				margin: 0 auto;
+			}
+			#menu li 
+			{
+				float: left;
+				margin: 0;
+			}
+			#menu li a 
+			{
+				text-decoration: underline;
+				display: block;
+				padding: 0 25px;
+				line-height: 30px;
+				color: #666;
+			}
+			#menu li a:hover, #menu li.active a 
+			{
+				background-color: #f5f5f5;
+			/*	border-bottom: 2px solid #DDD; */
+				color: #999;
+				text-decoration: underline;
+				text-shadow: 0 0 60px #000;
+				background-image: url(file:///H:/GeneralCODE/menuhover.png);
+				
+			}
+			
+			/* Black Menu */
+			#menu.black 
+			{
+				/*
+				border-top: 2px solid #333;
+				border-left: 2px solid #333;
+				border-bottom: 2px solid #000;
+				border-right: 2px solid #000;
 
-body
+				background: #333;
+				*/
+				background-image: url(file:///H:/GeneralCODE/menu.png);
+				box-shadow: 0 0 4px 2px #000;
+			}
+			#menu.black a 
+			{
+				color: #eee;
+			}
+			#menu.black li a:hover, #menu.black li.active a 
+			{
+				color: #fff; 
+				background: #555; 
+				/* border-bottom: 2px solid #444; */
+				
+				background-image: url(file:///H:/GeneralCODE/menuhover.png);
+				z-index: -1;
+			}
+
+/*---------------------------------------------*/
+.ph /* Pre-header with LOGO */
 {
-	width:800px;
-	font-family:Arial, Tahoma, Verdana;
-	font-weight:normal;
-	color:#fff;
-	background-image:url(http://cs303613.userapi.com/v303613132/228c/2_4z4JuafPY.jpg);
-	background-repeat:repeat;
-	margin:0 auto;
+	min-width: 1200px;
+	height: 70px;
+	font-size: 40px;
+	text-align: left;
+/*	background-color: #CC9966; */
+	background-image: url(file:///H:/GeneralCODE/footer.pngheader);	
 }
-a:link
+.lp /* logo + phones */
 {
-	font-weight:bold;
-	text-decoration:underline;
-	color:#f0f0f0;
+	width: 70%;
+	height:70px;
+/*	background-color: #345; */
+	font-size: 50px;
+	margin: 0 auto;
 }
-a:active
+.logo
 {
-	font-weight:bold;
-	text-decoration:none;
-	color:#f0f0f0;
+	width: 400px;
+	height: 70px;
+/*	background-color: #000; */
+	float: left;
 }
-a:visited
+.phone
 {
-	font-weight:bold;
-	text-decoration:none;
-	color:#f0f0f0;
+	width: 800px;
+	height: 70px;
+	float: right;
+	text-align: right;
+	font-size: 20px;
+	line-height: 13px;
+/*	background-color: #456; */
 }
-a:hover
+.menuh
 {
-	font-weight:bold;
-	color:#f0f0f0;
-	text-decoration:none;
+	min-width: 1230px;
+	height: 30px;
+	background-color: #000;
+	background-image: url(file:///H:/GeneralCODE/menu.png);
+}
+.dm /* double menu is in the header! */
+{
+	width: 1000px;
+	height: 40px;
+	font-size: 17px;
+/*	position: relative;
+	left: 25%; */
+	background-color: #000;
+
+}
+.header /* contains "dm" */
+{
+	width: 100%;
+	height: 40px;
+	background-color: #000;
+	text-align: left;	
+}
+.bs /* beautifull stomach */
+{
+/*	max-width: ; */
+	width:1200px;
+	height:695px;
+	background-color: f0f0f0;
+	background-image: url();
+	/* border: 1px solid grey; /* temporarily */
+	position: relative;
 }
 
-div.name
+.op /* our planes */
 {
-	height:60px;
-	width:800px;
-	background-image:url(http://cs303613.userapi.com/v303613132/228c/2_4z4JuafPY.jpg);
-	background-repeat:repeat;
-	float:left;
+	width: 900px;
+	height: 195px;
+	background-color: #654;
+	position: relative; 
+	top: 0px; /* used to be 100, but "ac" and "wc" existed */
+
 }
-div.socialpages
+.st /* stomach with icon+text and photos */
 {
-	height:290px;
-	width:100px;
-	background-color:#3b3d59;
-	float:left;
+	width: 70%;
+	height:1000px;
+	background-color: #FFEFDD;
+	/*
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	*/
+	position: relative;
+	bottom: 195px;
 }
-div.pho
+/*----------------------------FAMILY----------------------*/
+.pre /* Presentation */
 {
-	height:290px;
-	width:225px;
-	float:left;
+	width: 70%;
+	height: 99%;
+	float: left;
 }
-div.bpol
+.it /* icon + text */
 {
-	height:290px;
-	width:465px;
-	background-color:#33344c;
-	float:right;
+	width: 100%;
+	height: 33%;
+	background-color: #FFEFDD;
+	float: left;
+	margin-top: 5px;
 }
-div.menu
+.i /* icon */
 {
-	
-	height:55px;
-	width:800px;
-	background-color:#3b3d59;
-	float:left;
+	width: 200px;
+	height: 200px;
+	margin-top: 40px;
+	background-color: #FFEFDD;
+	float: left;
 }
-div.mainblock
+.t /* text */
 {
-	height:800px;
-	width:800px;
-	background-color:#3b3d59;
-	float:both;
+	width: 75%;
+	height: 100%;
+	background-color: #FFEFDD;
+	margin-left: 10px;
+	text-align: left;
+	font-size: 18px;
+	color: #4B2A17;
+	float: left;
 }
-div.footer
-{	
-	height:40px;
-	width:800px;
-	background-color:#3b3d59;
+/*-------------------------------------------------------*/
+.pho /* Photos. Beware of Pre-header! */
+{
+	width: 29%;
+	height: 100%;
+	background-color: #FFEFDD;
+	text-align: left;
+	padding-left: 10px;
+	float: right;
+	border-left: 2px solid #000;
+}
+.footer
+{
+	width: 70%;
+	height: 50px;
+	background-color: black;
+	position: relative;
+	bottom: 195px;
+	/* for radius in IE Use cc3pie or border-radius.htc */
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	background-image: url(file:///H:/GeneralCODE/footer.png);
 }
 
 	</style>
 </head>
-	<body>
-		<div id="body">
-			<div align="center">
-				
-				<div class="name">
-					<font></font>
+
+	<div align="center" id="body">		
+			<div class="ph">
+			
+				<div class="lp">
+					<div class="logo">
+						<font>Jetflight</font>
+					</div>	
+					<div class="phone">
+						<br>+7 (903) 345 5511</br>
+						<br>+7 (985) 472 4112</br>
+					</div>				
 				</div>
+			
+			</div>
+		<div class="menuh">
+			<ul id="menu" class="black">
+			<li><a href="#">О нас</a></li>
+			<li><a href="#">обслуживание</a></li>
+			<li><a href="#">Наши самолеты</a></li>
+			<li><a href="#">Менеджмент ВС</a></li>
+			<li><a href="#">Заказ самолета</a></li>
+			<li><a href="#">Грузовые перевозки</a></li>
+			<li><a href="#">Контакты</a></li>
+			</ul>
+		</div>
+		
+		<div class="bs">
+
 				
-				<div class="socialpages">
-				<a href="http://vk.com/saltova">
-					<img src="http://cs303613.userapi.com/v303613132/227b/qDlKo3GFTlU.jpg" width="90" height="90" align="left" />
-				</a>
-				<a href="https://twitter.com/saltovah">
-					<img src="http://cs303613.userapi.com/v303613132/2274/e62lLNfV9GY.jpg" width="90" height="90" vspace="10" align="left" />
-				</a>
-				<a href="http://saltova.blogspot.com/">
-					<img src="http://cs303613.userapi.com/v303613132/226d/Ds0JxUp9RQY.jpg" width="90" height="90" align="left" />
-				</a>	
+					
+				
+				
+				<!--
+				<div class="op">
+					</div>
+				-->
+		</div>	
+				
+				
+			<div class="st">
+				<div class="pre">
+					<div class="it">
+						<div class="i">
+							<img src="file:///D:/My%20Docs/Docs/Jetflight/Site/amolet2.png">
+						</div>
+						<div class="t">
+							<h2>Аренда самолета, заказ самолета (VIP чартер).</h2>
+							<font>
+								Авиатранспортная компания "Джет-Флайт" занимается организацией частных vip авиаперевозок на самолетах бизнес авиации. Наши клиенты - частные vip персоны, корпорации и компании. "Джет-Флайт" организовывает и осуществляет как индивидуальные, так и корпоративные авиатуры. Аренда самолета (vip чартер) позволяет нашим клиентам полностью сосредоточиться на ведении бизнеса или отдохнуть с максимальным комфортом, самостоятельно сформировать график и маршрут авиарейса, обеспечить конфиденциальность полета, взять с собой необходимое количество сотрудников или партнеров, а так же организовать корпоративный авиатур.
+							</font>
+						</div>
+					</div>
+
+					<div class="it">
+						<div class="i">
+							<img src="file:///D:/My%20Docs/Docs/Jetflight/Site/management2.png">
+						</div>
+						<div class="t">
+							<h2>Менеджмент воздушных судов</h2>
+							<font>
+При Вашей заинтересованности в приобретении самолета, компания "Джет-Флайт" готова оказать консультации и содействие в следующем:
+определение типа воздушного судна, максимально удовлетворяющего Вашим потребностям;
+расчет стоимости эксплуатации и поддержания технической годности самолета;
+содействие в приобретении ВС (организация технического аудита самолета, анализа технической документации самолета, а так же процедуры приемки самолета);
+организация летной эксплуатации самолета, начиная от его регистрации, организация технического обслуживания, подбор экипажа и т.д., включая оперативное управление и контроль эксплуатации ВС;
+предоставление резервного ВС в случае невозможности использования своего самолета по техническим или другим причинам.
+
+							</font>
+						</div>
+					</div>
+					<div class="it">
+						<div class="i">
+							<img src="file:///D:/My%20Docs/Docs/Jetflight/Site/cargo2.png">
+						</div>
+						<div class="t">
+<h2>Грузовые авиаперевозки</h2>
+							<font>
+								Компания "Джет-Флайт" готова организовать перевозку как больших, так и малых партий стандартных и нестандартных грузов
+Cрочный груз
+
+Остановилось производство, экстренно требуется гуманитарная помощь, невозможно обойтись без важной детали к промышленному оборудованию - в этих случаях мы в кратчайшие сроки организуем оптимальный самолет для доставки Вашего груза.
+Тяжеловесный и крупногабаритный груз
+
+Крупногабаритные, длинномерные, тяжеловесные грузы, особенно если нет времени везти по земле или по морю, всегда представляют проблемы для транспортировки. Грузовые отсеки самолетов, задействованных на регулярных рейсах, слишком малы и не дают такой возможности. Мы поможем Вам подобрать наиболее подходящий, экономичный и быстрый вариант его доставки.
+
+							</font>
+						</div>
+					</div>
 				</div>
 				<div class="pho">
-				<img src="http://cs303613.userapi.com/v303613132/223c/utb_4gPUbFY.jpg" alt="Альтернативный текст" width="225" height="290" />
+					<h1> Наши самолеты </h1>
 				</div>
-			
-				<div class="bpol" align="left">
-					<font style="font-size:20px">
-						<font  style="font-size:30px">Серёжа Салтовский</font>
-						<p align="left"><font style="font-size:55px" align="left">Обо мне</font></p>
-						
-						<p  align="left">
-						
-						Студент МГТУ им. Н.Э. Баумана,
-						специальность: лазерного и оптико электронного приборостроения и систем специального назначения, кафедра РЛ-2.
-						Разработчик графических пользовательских интерфейсов, MSP :-)
-						</p>
-					</font>
-				</div>
-			
-			
-				<div class="menu">
-					<p  align="left">
-						<font style="font-size:40px">Вопросы Яндекса:</font>
-						
-					</p>
-				</div>
-				<div class="mainblock">
-<table border="0" align="left" cellpadding="20">
-<tr width="300px">
-<td>-Расскажите нам о вашем опыте разработки. Ничего не упускайте: это может быть как серьезный интерфейс, так и просто домашняя страничка.
-</td>
-<td>-Начинал с проектировки множества сайтов на укозе и народе, самописных движков и страниц, интерфейсов приложений для школьных нужд. С началом учебы в университет первым проектом был заказной интерфейс "убийцы фейсбука" с уклоном на передвижения пользователя (проект закрылся по причине падения энтузиазма у команды), затем увлекся Metro-дизайном, разрабатывал концепты приложений и проектировал интернет-ресурсы в этом стиле. На данный момент проектирую интерфейс игры под Win8 для десктопа и метро-среды.</td>
-</tr>
-<tr width="300px">
-<td>-Какие языки программирования, фреймворки и технологии вы использовали? Сложились ли у вас личные предпочтения?
-</td>
-<td>-PHP, JS, HTML, CSS, Markdown
-предпочтений не сложилось</td>
-</tr>
-<tr width="300px">
-<td>-Какие редакторы и среды разработки вы использовали? Чем обычно пользуетесь?
-</td>
-<td>-Sublime Text 2, Visual Studio 2010, MS Notepad =), github.
-Обычно это Sublime.</td>
-</tr>
-<tr width="300px">
-<td>-С какими ОС приходилось сталкиваться? Для каких целей вы их использовали?
-</td>
-<td>-Windows 98/XP/7/8 Mac OS X
-На виндовс всегда жил, Mac изучал, чтобы какие-нибудь приемы перенять в проектировке приложений. </td>
-</tr>
-<tr width="300px">
-<td>-Приходилось ли вам пользоваться системами контроля версий? Если да, то какими? Какая из них вам нравится больше всего?	
-
-</td>
-<td>-Гитхаб</td>
-</tr>
-<tr width="300px">
-<td>
--Использовали ли вы системы постановки и ведения задач?
-</td>
-<td>
--Нет
-</td>
-</tr>
-<tr width="300px">
-<td>-Какие полезные для фронтенд-разработчика ресурсы вы используете и можете посоветовать?
-</td>
-<td>-Из ресурсов я посещаю Хабр и design.ru
-Из книжек по интерфейсам посоветую Томаса Льюиса (привычки, сознание, внимание), Джефа Раскина, Алана Купера. </td>
-</tr>
-<tr width="300px">
-<td>-Работали ли вы где-нибудь? Какие у вас были должностные обязанности? Есть ли опыт работы в команде?
-</td>
-<td>-Работал в Pepsico International, в отделе расчетов, был администратором группы по обработке счетов финансового департамента, работал на жуткой консольной программе, были мысли, как сделать из нее конфетку, но ресурсов таких не имел. Работал в нескольких стартапах, интереса ради, зарплатой был энтузиазм, отовсюду уходил из-за низкой "зарплаты", сейчас занят в команде по разработке приложений под Win8, на данный момент работаю над интерфейсом нескольких приложений, т.к. (кто бы мог подумать?=) ) сильно обгоняю программистов.</td>
-</tr>
-
-</table> 
-				</div>
-				
-			<!--	
-				<div class="footer">
-					<font>footer</font>
-				</div>
-			-->	
 			</div>	
-		</div>
-	</body>
+			
+				<div class="footer">
+				</div>	
+
+	</div>	
 </html>
